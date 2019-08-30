@@ -1,0 +1,23 @@
+.modules .ant-list-header{
+    background-color: #999999;
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 5%;
+}
+
+.modules .ant-spin-nested-loading{
+    background-color: #eeeeee;
+}
+
+.modules .ant-list-item{
+    margin-left: 5%;
+    border-bottom:1px solid #fff;
+
+}
+
+#report-table .ant-table-column-title {
+    /* background-color: #999999; */
+    font-size: 16px;
+    font-weight: bold;
+}
+
