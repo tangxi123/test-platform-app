@@ -1,3 +1,4 @@
+import {end_url} from '../common/Config';
 import React, { Component } from 'react';
 import AppHeader from '../common/AppHeader';
 import SockJS from 'sockjs-client';
@@ -14,10 +15,10 @@ const { TreeNode } = Tree;
 const Option = Select.Option;
 
 class Reports extends Component {
-    getProductsUrl = 'http://localhost:8081/api/modules/querySiblingSubmodules/0';
-    queryAllReportsUrl = 'http://localhost:8081/api/reports/query/?pageNum=';
-    getTreeUrl = 'http://localhost:8081/api/modules/tree/';
-    execTestCaseByModuleIdUrl = 'http://localhost:8081/api/testcases/exectestByModuleId/';
+    getProductsUrl = end_url + '/api/modules/querySiblingSubmodules/0';
+    queryAllReportsUrl = end_url + '/api/reports/query/?pageNum=';
+    getTreeUrl = end_url + '/api/modules/tree/';
+    execTestCaseByModuleIdUrl = end_url + '/api/testcases/exectestByModuleId/';
 
     requestHeaders = {
         'user-agent': 'Mozilla/4.0 MDN Example',

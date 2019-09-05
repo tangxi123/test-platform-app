@@ -1,3 +1,4 @@
+import {end_url} from '../common/Config';
 import React, { Component } from 'react';
 import AppHeader from '../common/AppHeader';
 import ReportTestCaseInfo from './ReportTestCaseInfo';
@@ -7,9 +8,9 @@ import './Report.css';
 const { Header, Content, Footer, Sider } = Layout;
 
 class ReadReport extends Component {
-    getReportUrl = 'http://localhost:8081/api/reports/report/';
-    getReportInfoUrl = 'http://localhost:8081/api/reports/report/reportInfo/';
-    getReportTestCaseUrl = 'http://localhost:8081/api/reports/report/reportInfo/testCases/';
+    getReportUrl = end_url+'/api/reports/report/';
+    getReportInfoUrl = end_url+'/api/reports/report/reportInfo/';
+    getReportTestCaseUrl = end_url+'/api/reports/report/reportInfo/testCases/';
 
     requestHeaders = {
         'user-agent': 'Mozilla/4.0 MDN Example',

@@ -1,3 +1,4 @@
+import {end_url} from '../common/Config';
 import React, { Component } from 'react';
 import AppHeader from '../common/AppHeader';
 import { Layout, Button, Table, Divider, Input, Tree, Row, Col, Select, Tooltip, List, Tag, Icon, } from 'antd';
@@ -6,8 +7,8 @@ const { TreeNode } = Tree;
 const Search = Input.Search;
 
 class ReportsInfo extends Component {
-    getReportModulesUrl = "http://localhost:8081/api/reports/report/reportInfo/";
-    getLogsResultUrl = "http://localhost:8081/api/logs/query/";
+    getReportModulesUrl = end_url + "/api/reports/report/reportInfo/";
+    getLogsResultUrl = end_url + "/api/logs/query/";
 
     requestHeaders = {
         'user-agent': 'Mozilla/4.0 MDN Example',
