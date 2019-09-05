@@ -8,7 +8,7 @@ const { Content, Footer } = Layout;
 let stompClient = null;
 
 class TestcaseLogInfo extends Component {
-    getTestCaseLogInfoUrl = 'http://localhost:8081/logs/log/info/';
+    getTestCaseLogInfoUrl = 'http://localhost:8081/api/logs/log/info/';
     requestHeaders = {
         'user-agent': 'Mozilla/4.0 MDN Example',
         'content-type': 'application/json'

@@ -6,8 +6,8 @@ const { Content, Footer } = Layout;
 
 class EditParameter extends Component {
 
-    queryParamByIdUrl = 'http://localhost:8081/parameters/query/';
-    submitUrl = 'http://localhost:8081/parameters/update';
+    queryParamByIdUrl = 'http://localhost:8081/api/parameters/query/';
+    submitUrl = 'http://localhost:8081/api/parameters/update';
 
     requestHeaders = {
         'user-agent': 'Mozilla/4.0 MDN Example',

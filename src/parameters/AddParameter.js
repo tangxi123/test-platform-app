@@ -6,7 +6,7 @@ const { Content, Footer } = Layout;
 
 class AddParameter extends Component {
 
-    submitUrl = 'http://localhost:8081/parameters/create';
+    submitUrl = 'http://localhost:8081/api/parameters/create';
     constructor(props) {
         super(props);
         this.state = {

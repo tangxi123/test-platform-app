@@ -5,8 +5,8 @@ import { Layout } from 'antd';
 const { Content, Footer } = Layout;
 
 class CopyTestCase extends Component {
-    submitUrl = 'http://localhost:8081/testcases/create';
-    getTestCaseByIdUrl = 'http://localhost:8081/testcases/';
+    submitUrl = 'http://localhost:8081/api/testcases/create';
+    getTestCaseByIdUrl = 'http://localhost:8081/api/testcases/';
     requestHeaders = {
         'user-agent': 'Mozilla/4.0 MDN Example',
         'content-type': 'application/json'

@@ -12,12 +12,12 @@ const { TreeNode } = Tree;
 const Option = Select.Option;
 
 class TestCase extends Component {
-    getProductsUrl = 'http://localhost:8081/modules/querySiblingSubmodules/0';
-    queryAllTestCaseUrl = 'http://localhost:8081/testcases/query/?pageNum=';
-    getTreeUrl = 'http://localhost:8081/modules/tree/';
-    execTestCaseUrl = 'http://localhost:8081/testcases/exectest/';
-    batchExecuteTestCasesUrl = 'http://localhost:8081/testcases/batchExecTestCases/';
-    deleteTestCaseUrl = 'http://localhost:8081/testcases/delete/';
+    getProductsUrl = 'http://localhost:8081/api/modules/querySiblingSubmodules/0';
+    queryAllTestCaseUrl = 'http://localhost:8081/api/testcases/query/?pageNum=';
+    getTreeUrl = 'http://localhost:8081/api/modules/tree/';
+    execTestCaseUrl = 'http://localhost:8081/api/testcases/exectest/';
+    batchExecuteTestCasesUrl = 'http://localhost:8081/api/testcases/batchExecTestCases/';
+    deleteTestCaseUrl = 'http://localhost:8081/api/testcases/delete/';
 
     currentProductId;
     requestHeaders = {
@@ -91,7 +91,7 @@ class TestCase extends Component {
             pagination: {},
             loading: false,
             moduleId: null,
-            productId: 61,
+            productId: 1,
             searchKey: '',
         }
     }
@@ -425,7 +425,7 @@ class TestCase extends Component {
                                             
                                         </Sider>
                                     }
-                                    {result &&
+                                    {/* {result && */}
                                         <div style={{padding:'0 0 0 120px'}}>
                                             <div style={{padding:'0 0 50px 0'}}>
                                                     <div className="search_input_text">
@@ -465,7 +465,7 @@ class TestCase extends Component {
                                             />
                                             </div>
                                         </div>
-                                    }
+                                    {/* } */}
                                    
                                 </Layout>
                                 </div>

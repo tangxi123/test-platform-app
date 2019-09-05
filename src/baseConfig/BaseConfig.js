@@ -17,7 +17,7 @@ const SubMenu = Menu.SubMenu;
 const { Option } = Select;
 
 class BaseConfig extends Component {
-    getProductsUrl = 'http://localhost:8081/modules/querySiblingSubmodules/0';
+    getProductsUrl = 'http://localhost:8081/api/modules/querySiblingSubmodules/0';
     requestHeaders = {
         'user-agent': 'Mozilla/4.0 MDN Example',
         'content-type': 'application/json'

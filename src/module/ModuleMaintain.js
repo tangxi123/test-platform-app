@@ -13,10 +13,10 @@ const { TreeNode } = Tree;
 const Search = Input.Search;
 
 class ModuleMaintain extends Component {
-    getProductUrl = "http://localhost:8081/modules/query/";
-    getTreeUrl = 'http://localhost:8081/modules/tree/';
-    addModuleUrl = 'http://localhost:8081/modules/create';
-    editModuleUrl = 'http://localhost:8081/modules/update';
+    getProductUrl = "http://localhost:8081/api/modules/query/";
+    getTreeUrl = 'http://localhost:8081/api/modules/tree/';
+    addModuleUrl = 'http://localhost:8081/api/modules/create';
+    editModuleUrl = 'http://localhost:8081/api/modules/update';
 
     requestHeaders = {  //发送请求的头部信息
         'user-agent': 'Mozilla/4.0 MDN Example',

@@ -6,8 +6,8 @@ const { Content, Footer } = Layout;
 
 class EditAction extends Component {
 
-    queryActionByIdUrl = 'http://localhost:8081/actions/query/';
-    submitUrl = 'http://localhost:8081/actions/update';
+    queryActionByIdUrl = 'http://localhost:8081/api/actions/query/';
+    submitUrl = 'http://localhost:8081/api/actions/update';
 
     requestHeaders = {
         'user-agent': 'Mozilla/4.0 MDN Example',

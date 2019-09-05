@@ -6,8 +6,8 @@ const { TreeNode } = Tree;
 const Search = Input.Search;
 
 class ReportsInfo extends Component {
-    getReportModulesUrl = "http://localhost:8081/reports/report/reportInfo/";
-    getLogsResultUrl = "http://localhost:8081/logs/query/";
+    getReportModulesUrl = "http://localhost:8081/api/reports/report/reportInfo/";
+    getLogsResultUrl = "http://localhost:8081/api/logs/query/";
 
     requestHeaders = {
         'user-agent': 'Mozilla/4.0 MDN Example',

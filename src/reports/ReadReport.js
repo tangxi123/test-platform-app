@@ -7,9 +7,9 @@ import './Report.css';
 const { Header, Content, Footer, Sider } = Layout;
 
 class ReadReport extends Component {
-    getReportUrl = 'http://localhost:8081/reports/report/';
-    getReportInfoUrl = 'http://localhost:8081/reports/report/reportInfo/';
-    getReportTestCaseUrl = 'http://localhost:8081/reports/report/reportInfo/testCases/';
+    getReportUrl = 'http://localhost:8081/api/reports/report/';
+    getReportInfoUrl = 'http://localhost:8081/api/reports/report/reportInfo/';
+    getReportTestCaseUrl = 'http://localhost:8081/api/reports/report/reportInfo/testCases/';
 
     requestHeaders = {
         'user-agent': 'Mozilla/4.0 MDN Example',

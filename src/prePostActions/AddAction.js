@@ -6,7 +6,7 @@ const { Content, Footer } = Layout;
 
 class AddAction extends Component {
 
-    submitUrl = 'http://localhost:8081/actions/create';
+    submitUrl = 'http://localhost:8081/api/actions/create';
     constructor(props) {
         super(props);
         this.state = {

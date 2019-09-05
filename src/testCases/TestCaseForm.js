@@ -14,10 +14,10 @@ const Option = Select.Option;
 
 class TestCaseForm extends Component {
 
-    getAllProductsUrl = 'http://localhost:8081/modules/querySiblingSubmodules/0';
-    getAllModulesUrl = 'http://localhost:8081/modules/queryFormattedModules/';
-    getAllTestEnvsUrl = 'http://localhost:8081/url/query/all/';
-    getAllActionsUrl = 'http://localhost:8081/actions/query/actionWrappers/?pageNum=';
+    getAllProductsUrl = 'http://localhost:8081/api/modules/querySiblingSubmodules/0';
+    getAllModulesUrl = 'http://localhost:8081/api/modules/queryFormattedModules/';
+    getAllTestEnvsUrl = 'http://localhost:8081/api/url/query/all/';
+    getAllActionsUrl = 'http://localhost:8081/api/actions/query/actionWrappers/?pageNum=';
 
     requestHeaders =  {
         'user-agent': 'Mozilla/4.0 MDN Example',
@@ -47,8 +47,10 @@ class TestCaseForm extends Component {
             actionPagination: {}, //前后置动作分页数据
             preActionVisible: false,
             postActionVisible: false,
-            selectedPreRowKeys:this.props.testCase.preActionNames.length>0 ? this.props.testCase.preActionNames : [],
-            selectedPostRowKeys:this.props.testCase.postActionNames.length>0 ? this.props.testCase.postActionNames : [],
+            // selectedPreRowKeys:this.props.testCase.preActionNames.length>0 ? this.props.testCase.preActionNames : [],
+            // selectedPostRowKeys:this.props.testCase.postActionNames.length>0 ? this.props.testCase.postActionNames : [],
+            selectedPreRowKeys:[],
+            selectedPostRowKeys:[],
             selectedPreActionNames: [],
             selectedPostActionNames: [],
             // testCase:this.props.testCase ? this.props.testCase : {},
@@ -108,6 +110,7 @@ class TestCaseForm extends Component {
   
 
     componentDidMount() {
+        console.log(this.props);
         const currentActionPageNum = 0;
         const {productId} = this.props; 
         this.fetchProduts();

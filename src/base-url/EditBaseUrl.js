@@ -38,7 +38,7 @@ class EditBaseUrl extends Component {
         if(id==undefined){
             return false;
         }else{
-            fetch('http://localhost:8081/url/query/'+id,{
+            fetch('http://localhost:8081/api/url/query/'+id,{
             headers: {
               'user-agent': 'Mozilla/4.0 MDN Example',
               'content-type': 'application/json'

@@ -14,11 +14,11 @@ const Option = Select.Option;
 
 class BatchAddTestCaseForm extends Component {
 
-    getAllProductsUrl = 'http://localhost:8081/modules/querySiblingSubmodules/0';
-    getAllModulesUrl = 'http://localhost:8081/modules/queryFormattedModules/';
-    getAllTestEnvsUrl = 'http://localhost:8081/url/query/all/';
-    getAllActionsUrl = 'http://localhost:8081/actions/query/actionWrappers/?pageNum=';
-    submitUrl = 'http://localhost:8081/testcases/insertBatchTestCases';
+    getAllProductsUrl = 'http://localhost:8081/api/modules/querySiblingSubmodules/0';
+    getAllModulesUrl = 'http://localhost:8081/api/modules/queryFormattedModules/';
+    getAllTestEnvsUrl = 'http://localhost:8081/api/url/query/all/';
+    getAllActionsUrl = 'http://localhost:8081/api/actions/query/actionWrappers/?pageNum=';
+    submitUrl = 'http://localhost:8081/api/testcases/insertBatchTestCases';
 
     requestHeaders = {
         'user-agent': 'Mozilla/4.0 MDN Example',

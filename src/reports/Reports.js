@@ -14,10 +14,10 @@ const { TreeNode } = Tree;
 const Option = Select.Option;
 
 class Reports extends Component {
-    getProductsUrl = 'http://localhost:8081/modules/querySiblingSubmodules/0';
-    queryAllReportsUrl = 'http://localhost:8081/reports/query/?pageNum=';
-    getTreeUrl = 'http://localhost:8081/modules/tree/';
-    execTestCaseByModuleIdUrl = 'http://localhost:8081/testcases/exectestByModuleId/';
+    getProductsUrl = 'http://localhost:8081/api/modules/querySiblingSubmodules/0';
+    queryAllReportsUrl = 'http://localhost:8081/api/reports/query/?pageNum=';
+    getTreeUrl = 'http://localhost:8081/api/modules/tree/';
+    execTestCaseByModuleIdUrl = 'http://localhost:8081/api/testcases/exectestByModuleId/';
 
     requestHeaders = {
         'user-agent': 'Mozilla/4.0 MDN Example',
@@ -96,9 +96,9 @@ class Reports extends Component {
             result: null,
             pagination: {},
             moduleId: null,
-            productId: 61,
+            productId: 1,
             searchKey: '',
-            selectedKeys: ['61'],
+            selectedKeys: ['1'],
         };
     }
 

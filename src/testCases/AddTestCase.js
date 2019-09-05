@@ -7,7 +7,7 @@ const { Content, Footer } = Layout;
 
 class AddTestCase extends Component{
 
-    submitUrl = 'http://localhost:8081/testcases/create';
+    submitUrl = 'http://localhost:8081/api/testcases/create';
     constructor(props){
         super(props);
         this.state = {

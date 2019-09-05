@@ -15,12 +15,12 @@ const Search = Input.Search;
 class BaseUrl extends Component {
 
 
-    submitCreateUrl = 'http://localhost:8081/url/create';  //创建url的url
-    submitUpdateUrl = 'http://localhost:8081/url/update'; //更新url的url
-    queryUrl = 'http://localhost:8081/url/query/' //根据id获取url信息的url
-    queryAllUrl = 'http://localhost:8081/url/query/?pageNum=' //获取分页url的url
-    querySearchKeyUrl = 'http://localhost:8081/url/query/?searchKey=' //根据关键字查询url的url
-    deleteUrl = 'http://localhost:8081/url/delete/' //根据id删除url的url
+    submitCreateUrl = 'http://localhost:8081/api/url/create';  //创建url的url
+    submitUpdateUrl = 'http://localhost:8081/api/url/update'; //更新url的url
+    queryUrl = 'http://localhost:8081/api/url/query/' //根据id获取url信息的url
+    queryAllUrl = 'http://localhost:8081/api/url/query/?pageNum=' //获取分页url的url
+    querySearchKeyUrl = 'http://localhost:8081/api/url/query/?searchKey=' //根据关键字查询url的url
+    deleteUrl = 'http://localhost:8081/api/url/delete/' //根据id删除url的url
 
     headers = {                                     //发送请求的headers
         'user-agent': 'Mozilla/4.0 MDN Example',

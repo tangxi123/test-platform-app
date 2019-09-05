@@ -7,7 +7,7 @@ const { Content, Footer } = Layout;
 let stompClient = null;
 
 class ExecuteTestcase extends Component {
-    execTestCaseUrl = 'http://localhost:8081/testcases/exectest/';
+    execTestCaseUrl = 'http://localhost:8081/api/testcases/exectest/';
     requestHeaders = {
         'user-agent': 'Mozilla/4.0 MDN Example',
         'content-type': 'application/json'

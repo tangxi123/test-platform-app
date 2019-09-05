@@ -13,11 +13,11 @@ const Search = Input.Search;
 
 class Actions extends Component {
 
-    queryActionsUrl = 'http://localhost:8081/actions/query/actionWrappers/?pageNum=';
-    queryActionByIdUrl = 'http://localhost:8081/actions/query/';
-    createActionUrl = 'http://localhost:8081/actions/create';
-    updateActionUrl =  'http://localhost:8081/actions/update';
-    deleteActionUrl = 'http://localhost:8081/actions/delete/';
+    queryActionsUrl = 'http://localhost:8081/api/actions/query/actionWrappers/?pageNum=';
+    queryActionByIdUrl = 'http://localhost:8081/api/actions/query/';
+    createActionUrl = 'http://localhost:8081/api/actions/create';
+    updateActionUrl =  'http://localhost:8081/api/actions/update';
+    deleteActionUrl = 'http://localhost:8081/api/actions/delete/';
 
     reuqestHeaders = {
         'user-agent': 'Mozilla/4.0 MDN Example',

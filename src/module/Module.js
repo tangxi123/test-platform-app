@@ -114,7 +114,7 @@ class Module extends Component {
 
 
     fetchModules = () => {
-        fetch('http://localhost:8081/modules/querySiblingSubmodules/0', {
+        fetch('http://localhost:8081/api/modules/querySiblingSubmodules/0', {
             headers: {
                 'user-agent': 'Mozilla/4.0 MDN Example',
                 'content-type': 'application/json'
@@ -132,7 +132,7 @@ class Module extends Component {
     //点击编辑按钮，弹出项目编辑框
     onEditButtonClick = (id) => {
         this.setUpdateModuleModalVisible(true);
-        this.setSubmitUpdateUrl('http://localhost:8081/modules/update');
+        this.setSubmitUpdateUrl('http://localhost:8081/api/modules/update');
         this.setModuleId(id);
         fetch('http://localhost:8081/modules/query/' + id, {
             headers: {
@@ -154,8 +154,8 @@ class Module extends Component {
 
 
     onSearchKey = (value) => {
-        console.log('http://localhost:8081/modules/querySiblingSubmodules/?id=0' + '&' + 'searchKey=' + value);
-        fetch('http://localhost:8081/modules/querySiblingSubmodules/?id=0' + '&' + 'searchKey=' + value, {
+        console.log('http://localhost:8081/api/modules/querySiblingSubmodules/?id=0' + '&' + 'searchKey=' + value);
+        fetch('http://localhost:8081/api/modules/querySiblingSubmodules/?id=0' + '&' + 'searchKey=' + value, {
             headers: {
                 'user-agent': 'Mozilla/4.0 MDN Example',
                 'content-type': 'application/json'
@@ -171,7 +171,7 @@ class Module extends Component {
     //点击新增项目按钮，弹出项目输入框
     addModule = () => {
         this.setAddModuleModalVisible(true);
-        this.setSubmitCreateUrl('http://localhost:8081/modules/create');
+        this.setSubmitCreateUrl('http://localhost:8081/api/modules/create');
 
     }
 
