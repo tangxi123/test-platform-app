@@ -1,3 +1,4 @@
+import {end_url} from '../common/Config';
 import React, { Component } from 'react';
 import AppHeader from '../common/AppHeader';
 import ParameterForm from './ParameterForm';
@@ -6,7 +7,7 @@ const { Content, Footer } = Layout;
 
 class AddParameter extends Component {
 
-    submitUrl = 'http://localhost:8081/api/parameters/create';
+    submitUrl = end_url+'/api/parameters/create';
     constructor(props) {
         super(props);
         this.state = {

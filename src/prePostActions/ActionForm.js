@@ -1,3 +1,4 @@
+import {end_url} from '../common/Config';
 import React, { Component } from 'react';
 import SqlTable from './SqlTable';
 import {
@@ -11,7 +12,7 @@ const { TextArea } = Input;
 const Option = Select.Option;
 
 class ActionForm extends Component {
-    getAllDBConfigByModuleIdUrl = 'http://localhost:8081/api/dbConfig/query/all/moduleId/';
+    getAllDBConfigByModuleIdUrl = end_url+'/api/dbConfig/query/all/moduleId/';
 
     requestHeaders = {  //发送请求的头部信息
         'user-agent': 'Mozilla/4.0 MDN Example',

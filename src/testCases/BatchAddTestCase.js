@@ -1,3 +1,4 @@
+import {end_url} from '../common/Config';
 import React, { Component } from 'react';
 import AppHeader from '../common/AppHeader';
 import '../common/style.css';
@@ -7,7 +8,7 @@ const { Content, Footer } = Layout;
 
 class BatchAddTestCase extends Component{
 
-    submitUrl = 'http://localhost:8081/api/testcases/create';
+    submitUrl = end_url + '/api/testcases/create';
     constructor(props){
         super(props);
         this.state = {

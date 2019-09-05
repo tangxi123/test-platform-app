@@ -1,3 +1,4 @@
+import {end_url} from '../common/Config';
 import React, { Component } from 'react';
 import {
     Link,
@@ -10,7 +11,7 @@ const { Content, Footer } = Layout;
 let stompClient = null;
 
 class TestcaseResult extends Component {
-    getTestCaseResultUrl = 'http://localhost:8081/api/logs/log/';
+    getTestCaseResultUrl = end_url + '/api/logs/log/';
     requestHeaders = {
         'user-agent': 'Mozilla/4.0 MDN Example',
         'content-type': 'application/json'

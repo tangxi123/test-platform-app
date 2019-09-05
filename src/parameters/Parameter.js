@@ -1,3 +1,4 @@
+import {end_url} from '../common/Config';
 import React, { Component } from 'react';
 import AppHeader from '../common/AppHeader';
 import ParameterModal from './ParameterModal';
@@ -13,11 +14,11 @@ const Search = Input.Search;
 
 class Parameter extends Component {
 
-    queryParamsUrl = 'http://localhost:8081/parameters/query/paramWrappers/?pageNum=';
-    submitCreateUrl = 'http://localhost:8081/parameters/create';  //创建dbConfig的url
-    submitUpdateUrl = 'http://localhost:8081/parameters/update'; //更新dbConfig的url
-    queryParameterByIdUrl = 'http://localhost:8081/parameters/query/' //根据id获取url信息的url
-    deleteParamUrl = 'http://localhost:8081/parameters/delete/';
+    queryParamsUrl = end_url+'/api/parameters/query/paramWrappers/?pageNum=';
+    submitCreateUrl = end_url+'/api/parameters/create';  //创建dbConfig的url
+    submitUpdateUrl = end_url+'/api/parameters/update'; //更新dbConfig的url
+    queryParameterByIdUrl = end_url+'/api/parameters/query/' //根据id获取url信息的url
+    deleteParamUrl = end_url+'/api/parameters/delete/';
 
     reuqestHeaders = {
         'user-agent': 'Mozilla/4.0 MDN Example',

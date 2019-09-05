@@ -1,3 +1,4 @@
+import {end_url} from '../common/Config';
 import React, { Component } from 'react';
 import AppHeader from '../common/AppHeader';
 import ModuleModal from './ModuleModal';
@@ -114,7 +115,7 @@ class Module extends Component {
 
 
     fetchModules = () => {
-        fetch('http://localhost:8081/api/modules/querySiblingSubmodules/0', {
+        fetch(end_url+'/api/modules/querySiblingSubmodules/0', {
             headers: {
                 'user-agent': 'Mozilla/4.0 MDN Example',
                 'content-type': 'application/json'
@@ -132,9 +133,9 @@ class Module extends Component {
     //点击编辑按钮，弹出项目编辑框
     onEditButtonClick = (id) => {
         this.setUpdateModuleModalVisible(true);
-        this.setSubmitUpdateUrl('http://localhost:8081/api/modules/update');
+        this.setSubmitUpdateUrl(end_url+'/api/modules/update');
         this.setModuleId(id);
-        fetch('http://localhost:8081/modules/query/' + id, {
+        fetch(end_url+'/api/modules/query/' + id, {
             headers: {
                 'user-agent': 'Mozilla/4.0 MDN Example',
                 'content-type': 'application/json'
@@ -154,8 +155,8 @@ class Module extends Component {
 
 
     onSearchKey = (value) => {
-        console.log('http://localhost:8081/api/modules/querySiblingSubmodules/?id=0' + '&' + 'searchKey=' + value);
-        fetch('http://localhost:8081/api/modules/querySiblingSubmodules/?id=0' + '&' + 'searchKey=' + value, {
+        console.log(end_url+'/api/modules/querySiblingSubmodules/?id=0' + '&' + 'searchKey=' + value);
+        fetch(end_url+'/api/modules/querySiblingSubmodules/?id=0' + '&' + 'searchKey=' + value, {
             headers: {
                 'user-agent': 'Mozilla/4.0 MDN Example',
                 'content-type': 'application/json'
@@ -171,7 +172,7 @@ class Module extends Component {
     //点击新增项目按钮，弹出项目输入框
     addModule = () => {
         this.setAddModuleModalVisible(true);
-        this.setSubmitCreateUrl('http://localhost:8081/api/modules/create');
+        this.setSubmitCreateUrl(end_url+'/api/modules/create');
 
     }
 

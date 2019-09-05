@@ -1,3 +1,4 @@
+import {end_url} from '../common/Config';
 import React, { Component } from 'react';
 import AppHeader from '../common/AppHeader';
 import ActionModal from './ActionModal';
@@ -13,11 +14,11 @@ const Search = Input.Search;
 
 class Actions extends Component {
 
-    queryActionsUrl = 'http://localhost:8081/api/actions/query/actionWrappers/?pageNum=';
-    queryActionByIdUrl = 'http://localhost:8081/api/actions/query/';
-    createActionUrl = 'http://localhost:8081/api/actions/create';
-    updateActionUrl =  'http://localhost:8081/api/actions/update';
-    deleteActionUrl = 'http://localhost:8081/api/actions/delete/';
+    queryActionsUrl = end_url+'/api/actions/query/actionWrappers/?pageNum=';
+    queryActionByIdUrl = end_url+'/api/actions/query/';
+    createActionUrl = end_url+'/api/actions/create';
+    updateActionUrl =  end_url+'/api/actions/update';
+    deleteActionUrl = end_url+'/api/actions/delete/';
 
     reuqestHeaders = {
         'user-agent': 'Mozilla/4.0 MDN Example',

@@ -1,3 +1,4 @@
+import {end_url} from '../common/Config';
 import React, { Component } from 'react';
 import AppHeader from '../common/AppHeader';
 import TestCaseForm from './TestCaseForm';
@@ -5,8 +6,8 @@ import { Layout } from 'antd';
 const { Content, Footer } = Layout;
 
 class EditTestCase extends Component {
-    submitUrl = 'http://localhost:8081/api/testcases/update';
-    getTestCaseByIdUrl = 'http://localhost:8081/api/testcases/';
+    submitUrl = end_url + '/api/testcases/update';
+    getTestCaseByIdUrl = end_url +'/api/testcases/';
     requestHeaders = {
         'user-agent': 'Mozilla/4.0 MDN Example',
         'content-type': 'application/json'

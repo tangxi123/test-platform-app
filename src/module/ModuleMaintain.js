@@ -1,3 +1,4 @@
+import {end_url} from '../common/Config';
 import React, { Component } from 'react';
 import AppHeader from '../common/AppHeader';
 import ModuleInputForm from './ModuleMaintainForm';
@@ -13,10 +14,10 @@ const { TreeNode } = Tree;
 const Search = Input.Search;
 
 class ModuleMaintain extends Component {
-    getProductUrl = "http://localhost:8081/api/modules/query/";
-    getTreeUrl = 'http://localhost:8081/api/modules/tree/';
-    addModuleUrl = 'http://localhost:8081/api/modules/create';
-    editModuleUrl = 'http://localhost:8081/api/modules/update';
+    getProductUrl = end_url + "/api/modules/query/";
+    getTreeUrl = end_url + '/api/modules/tree/';
+    addModuleUrl = end_url + '/api/modules/create';
+    editModuleUrl = end_url + '/api/modules/update';
 
     requestHeaders = {  //发送请求的头部信息
         'user-agent': 'Mozilla/4.0 MDN Example',

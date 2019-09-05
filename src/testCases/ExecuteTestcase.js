@@ -1,3 +1,4 @@
+import {end_url} from '../common/Config';
 import React, { Component } from 'react';
 import AppHeader from '../common/AppHeader';
 import SockJS from 'sockjs-client';
@@ -7,7 +8,7 @@ const { Content, Footer } = Layout;
 let stompClient = null;
 
 class ExecuteTestcase extends Component {
-    execTestCaseUrl = 'http://localhost:8081/api/testcases/exectest/';
+    execTestCaseUrl = end_url + '/api/testcases/exectest/';
     requestHeaders = {
         'user-agent': 'Mozilla/4.0 MDN Example',
         'content-type': 'application/json'
@@ -30,7 +31,7 @@ class ExecuteTestcase extends Component {
     }
 
     componentDidMount() {
-        this.connection();
+        // this.connection();
         this.execTestCase(this.execTestCaseUrl);
     }
 

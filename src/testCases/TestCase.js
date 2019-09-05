@@ -1,3 +1,4 @@
+import {end_url} from '../common/Config';
 import React, { Component } from 'react';
 import AppHeader from '../common/AppHeader';
 import {
@@ -12,12 +13,12 @@ const { TreeNode } = Tree;
 const Option = Select.Option;
 
 class TestCase extends Component {
-    getProductsUrl = 'http://localhost:8081/api/modules/querySiblingSubmodules/0';
-    queryAllTestCaseUrl = 'http://localhost:8081/api/testcases/query/?pageNum=';
-    getTreeUrl = 'http://localhost:8081/api/modules/tree/';
-    execTestCaseUrl = 'http://localhost:8081/api/testcases/exectest/';
-    batchExecuteTestCasesUrl = 'http://localhost:8081/api/testcases/batchExecTestCases/';
-    deleteTestCaseUrl = 'http://localhost:8081/api/testcases/delete/';
+    getProductsUrl = end_url+'/api/modules/querySiblingSubmodules/0';
+    queryAllTestCaseUrl = end_url+'/api/testcases/query/?pageNum=';
+    getTreeUrl = end_url+'/api/modules/tree/';
+    execTestCaseUrl = end_url+'/api/testcases/exectest/';
+    batchExecuteTestCasesUrl = end_url+'/api/testcases/batchExecTestCases/';
+    deleteTestCaseUrl = end_url+'/api/testcases/delete/';
 
     currentProductId;
     requestHeaders = {

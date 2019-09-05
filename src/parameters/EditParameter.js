@@ -1,3 +1,4 @@
+import {end_url} from '../common/Config';
 import React, { Component } from 'react';
 import AppHeader from '../common/AppHeader';
 import ParameterForm from './ParameterForm';
@@ -6,8 +7,8 @@ const { Content, Footer } = Layout;
 
 class EditParameter extends Component {
 
-    queryParamByIdUrl = 'http://localhost:8081/api/parameters/query/';
-    submitUrl = 'http://localhost:8081/api/parameters/update';
+    queryParamByIdUrl = end_url + '/api/parameters/query/';
+    submitUrl = end_url+'/api/parameters/update';
 
     requestHeaders = {
         'user-agent': 'Mozilla/4.0 MDN Example',

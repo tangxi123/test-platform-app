@@ -1,3 +1,4 @@
+import {end_url} from '../common/Config';
 import React, { Component } from 'react';
 import ActionsModal from './ActionsModal';
 import BatchAddTestCaseTable from './BatchAddTestCaseTable';
@@ -14,11 +15,11 @@ const Option = Select.Option;
 
 class BatchAddTestCaseForm extends Component {
 
-    getAllProductsUrl = 'http://localhost:8081/api/modules/querySiblingSubmodules/0';
-    getAllModulesUrl = 'http://localhost:8081/api/modules/queryFormattedModules/';
-    getAllTestEnvsUrl = 'http://localhost:8081/api/url/query/all/';
-    getAllActionsUrl = 'http://localhost:8081/api/actions/query/actionWrappers/?pageNum=';
-    submitUrl = 'http://localhost:8081/api/testcases/insertBatchTestCases';
+    getAllProductsUrl = end_url+'/api/modules/querySiblingSubmodules/0';
+    getAllModulesUrl = end_url+'/api/modules/queryFormattedModules/';
+    getAllTestEnvsUrl = end_url+'/api/url/query/all/';
+    getAllActionsUrl = end_url+'/api/actions/query/actionWrappers/?pageNum=';
+    submitUrl = end_url+'/api/testcases/insertBatchTestCases';
 
     requestHeaders = {
         'user-agent': 'Mozilla/4.0 MDN Example',

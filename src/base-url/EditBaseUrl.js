@@ -1,3 +1,4 @@
+import {end_url} from '../common/Config';
 import React, { Component } from 'react';
 import AppHeader from '../common/AppHeader';
 import BaseUrlForm from './BaseUrlForm';
@@ -11,6 +12,7 @@ import { Layout, Menu, Avatar, List, Icon, Button, Form, Input, Checkbox } from 
 const { Header, Content, Footer } = Layout;
 
 class EditBaseUrl extends Component {
+    queryUrl = end_url + '/api/url/query/';
     constructor(props) {
         super(props);
         console.log(this.props);
@@ -38,7 +40,7 @@ class EditBaseUrl extends Component {
         if(id==undefined){
             return false;
         }else{
-            fetch('http://localhost:8081/api/url/query/'+id,{
+            fetch(this.queryUrl+id,{
             headers: {
               'user-agent': 'Mozilla/4.0 MDN Example',
               'content-type': 'application/json'

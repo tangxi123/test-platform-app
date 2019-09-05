@@ -1,3 +1,4 @@
+import {end_url} from '../common/Config';
 import React, { Component } from 'react';
 import AppHeader from '../common/AppHeader';
 import BaseUrl from '../base-url/BaseUrl';
@@ -17,7 +18,7 @@ const SubMenu = Menu.SubMenu;
 const { Option } = Select;
 
 class BaseConfig extends Component {
-    getProductsUrl = 'http://localhost:8081/api/modules/querySiblingSubmodules/0';
+    getProductsUrl = end_url+'/api/modules/querySiblingSubmodules/0';
     requestHeaders = {
         'user-agent': 'Mozilla/4.0 MDN Example',
         'content-type': 'application/json'

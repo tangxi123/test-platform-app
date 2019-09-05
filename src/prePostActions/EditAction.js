@@ -1,3 +1,4 @@
+import {end_url} from '../common/Config';
 import React, { Component } from 'react';
 import AppHeader from '../common/AppHeader';
 import ActionForm from './ActionForm';
@@ -6,8 +7,8 @@ const { Content, Footer } = Layout;
 
 class EditAction extends Component {
 
-    queryActionByIdUrl = 'http://localhost:8081/api/actions/query/';
-    submitUrl = 'http://localhost:8081/api/actions/update';
+    queryActionByIdUrl = end_url+'/api/actions/query/';
+    submitUrl = end_url+'/api/actions/update';
 
     requestHeaders = {
         'user-agent': 'Mozilla/4.0 MDN Example',

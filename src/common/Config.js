@@ -1,0 +1,1 @@
+export const end_url = 'http://localhost:8081';

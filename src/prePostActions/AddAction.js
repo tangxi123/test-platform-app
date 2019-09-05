@@ -1,3 +1,4 @@
+import {end_url} from '../common/Config';
 import React, { Component } from 'react';
 import AppHeader from '../common/AppHeader';
 import ActionForm from './ActionForm';
@@ -6,7 +7,7 @@ const { Content, Footer } = Layout;
 
 class AddAction extends Component {
 
-    submitUrl = 'http://localhost:8081/api/actions/create';
+    submitUrl = end_url + '/api/actions/create';
     constructor(props) {
         super(props);
         this.state = {

@@ -1,3 +1,4 @@
+import {end_url} from '../common/Config';
 import React, { Component } from 'react';
 import ActionsModal from './ActionsModal';
 import CheckPointsTable from './CheckPointsTable';
@@ -14,10 +15,10 @@ const Option = Select.Option;
 
 class TestCaseForm extends Component {
 
-    getAllProductsUrl = 'http://localhost:8081/api/modules/querySiblingSubmodules/0';
-    getAllModulesUrl = 'http://localhost:8081/api/modules/queryFormattedModules/';
-    getAllTestEnvsUrl = 'http://localhost:8081/api/url/query/all/';
-    getAllActionsUrl = 'http://localhost:8081/api/actions/query/actionWrappers/?pageNum=';
+    getAllProductsUrl = end_url+'/api/modules/querySiblingSubmodules/0';
+    getAllModulesUrl = end_url+'/api/modules/queryFormattedModules/';
+    getAllTestEnvsUrl = end_url+'/api/url/query/all/';
+    getAllActionsUrl = end_url+'/api/actions/query/actionWrappers/?pageNum=';
 
     requestHeaders =  {
         'user-agent': 'Mozilla/4.0 MDN Example',

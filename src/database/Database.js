@@ -1,3 +1,4 @@
+import {end_url} from '../common/Config';
 import React, { Component } from 'react';
 import AppHeader from '../common/AppHeader';
 import DatabaseModal from './DatabaseModal';
@@ -13,10 +14,10 @@ const Search = Input.Search;
 const {Option} = Select; 
 
 class Database extends Component {
-    getDBUrl = 'http://localhost:8081/api/dbConfig/query/?pageNum=' //获取分页dbConfig的url
-    submitCreateUrl = 'http://localhost:8081/api/dbConfig/create';  //创建dbConfig的url
-    submitUpdateUrl = 'http://localhost:8081/api/dbConfig/update'; //更新dbConfig的url
-    querydbConfigByIdUrl = 'http://localhost:8081/api/dbConfig/query/' //根据id获取url信息的url
+    getDBUrl = end_url+'/api/dbConfig/query/?pageNum=' //获取分页dbConfig的url
+    submitCreateUrl = end_url+'/api/dbConfig/create';  //创建dbConfig的url
+    submitUpdateUrl = end_url+'/api/dbConfig/update'; //更新dbConfig的url
+    querydbConfigByIdUrl = end_url+'/api/dbConfig/query/' //根据id获取url信息的url
     headers = {                                     //发送请求的headers
         'user-agent': 'Mozilla/4.0 MDN Example',
         'content-type': 'application/json'
