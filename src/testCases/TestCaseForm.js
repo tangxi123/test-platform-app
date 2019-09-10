@@ -48,8 +48,8 @@ class TestCaseForm extends Component {
             actionPagination: {}, //前后置动作分页数据
             preActionVisible: false,
             postActionVisible: false,
-            selectedPreRowKeys:[],
-            selectedPostRowKeys:[],
+            selectedPreRowKeys:this.props.testCase ? this.props.testCase.preActionNames : [],
+            selectedPostRowKeys:this.props.testCase ? this.props.testCase.postActionNames : [],
             selectedPreActionNames: [],
             selectedPostActionNames: [],
         }
@@ -252,11 +252,10 @@ class TestCaseForm extends Component {
             console.log("values的值");
             console.log(values);
             if (!err) {
+                
+                values.checkPoints = checkResult;
                 values.preActionNames = this.state.selectedPreRowKeys;
                 values.postActionNames = this.state.selectedPostRowKeys;
-                values.checkPoints = checkResult;
-                // console.log(values);
-                
                 if(submitUrl.indexOf('update')!=-1){
                     values.id = testCase.id;
                     // console.log(values);
