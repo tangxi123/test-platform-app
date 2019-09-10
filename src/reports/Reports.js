@@ -62,30 +62,30 @@ class Reports extends Component {
         )
     }];
 
-    productColumns = [{
-        title: '产品名字',
-        dataIndex: 'name',
-        onCell: () => {
-            return {
-                style: {
-                    maxWidth: 200,
-                    overflow: 'hidden',
-                    whiteSpace: 'nowrap',
-                    textOverflow: 'ellipsis',
-                    cursor: 'pointer'
-                }
-            }
-        },
-        render: (text) => <Tooltip placement="topLeft" title={text}>{text}</Tooltip>
-    }, {
-        title: '操作',
-        dataIndex: '',
-        render: (record) => (
-            <span onClick={e => e.stopPropagation()}>
-                <Button size="small" onClick={() => this.generateReport(record.id)}>生成报告</Button>
-            </span>
-        )
-    }];
+    // productColumns = [{
+    //     title: '产品名字',
+    //     dataIndex: 'name',
+    //     onCell: () => {
+    //         return {
+    //             style: {
+    //                 maxWidth: 200,
+    //                 overflow: 'hidden',
+    //                 whiteSpace: 'nowrap',
+    //                 textOverflow: 'ellipsis',
+    //                 cursor: 'pointer'
+    //             }
+    //         }
+    //     },
+    //     render: (text) => <Tooltip placement="topLeft" title={text}>{text}</Tooltip>
+    // }, {
+    //     title: '操作',
+    //     dataIndex: '',
+    //     render: (record) => (
+    //         <span onClick={e => e.stopPropagation()}>
+    //             <Button size="small" onClick={(event) => this.generateReport(record.id, event)}>生成报告</Button>
+    //         </span>
+    //     )
+    // }];
 
     constructor(props) {
         super(props);
@@ -227,7 +227,7 @@ class Reports extends Component {
                 item.title = (
                     <div>
                         <span>{item.name}</span>
-                        <Icon style={{ marginLeft: 10 }} type='play-circle' onClick={() => this.generateReport(item.id)} />
+                        <Icon style={{ marginLeft: 10 }} type='play-circle' onClick={(e) => this.generateReport(item.id, e)} />
                     </div>
                 );
                 return (
@@ -287,7 +287,8 @@ class Reports extends Component {
     }
 
     //生成报告
-    generateReport = (moduleId) => {
+    generateReport = (moduleId,e) => {
+        e.stopPropagation();
         console.log(moduleId);
         const requestInfo = {
             headers: this.requestHeaders,
