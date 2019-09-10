@@ -314,7 +314,7 @@ class TestCaseForm extends Component {
         let testName = null;
         let descs = null;
         let method = null;
-        let baseUrlId = null;
+        let baseUrlId = '';
         let url = null;
         let headers = null;
         let parameters = null;
@@ -336,7 +336,7 @@ class TestCaseForm extends Component {
             testName = null;
             descs = null;
             method = null;
-            baseUrlId = null;
+            baseUrlId = '';
             url = null;
             headers = null;
             parameters = null;
