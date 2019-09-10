@@ -153,8 +153,6 @@ class TestCase extends Component {
         const searchKey = '';
         const currentProductId = this.state.productId;
         this.fetchProducts();
-        this.setState((state,props) => ({productId : state.products}));
-        // console.log(this.state.products);
         this.fetchTestCases(currentPageNum, currentProductId, searchKey);
         this.fetchTree(currentProductId);
     }
