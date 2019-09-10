@@ -39,12 +39,12 @@ class AppHeader extends Component {
                                     selectedKeys={this.props.selectedKeys}
                                     mode="horizontal"
                                 >
-                                    <Menu.Item key="index">
+                                    {/* <Menu.Item key="index">
                                         <Link to="/home">
                                             <Icon type="border-bottom" />
                                             <span>首页</span>
                                         </Link>
-                                    </Menu.Item>
+                                    </Menu.Item> */}
                                     <Menu.Item key="module">
                                         <Link to="/module">
                                             <Icon type="border-horizontal" />
