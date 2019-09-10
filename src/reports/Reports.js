@@ -297,9 +297,8 @@ class Reports extends Component {
         this.setLoading(true);
         fetch(this.execTestCaseByModuleIdUrl + moduleId, requestInfo)
             .then(response => response.json())
-            .then(result => {
-                alert(result.data);
-            })
+            .then(result => {alert(result.data);})
+            .then(() => this.fetchReports(0, moduleId, ''))
             .then(this.setLoading(false))
             .catch(e => e);
     }

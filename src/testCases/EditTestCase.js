@@ -68,8 +68,8 @@ class EditTestCase extends Component {
                         <Content style={{ border: '1px solid rgb(192,192,192)', margin: '50px 100px', padding: '20px 20px' }}>
                             <TestCaseForm
                                 submitUrl={this.submitUrl}
-                                moduleId={moduleId}
-                                productId={productId}
+                                moduleId={testCase.moduleId}
+                                productId={testCase.suite}
                                 testCase={testCase}
                             />
                         </Content>

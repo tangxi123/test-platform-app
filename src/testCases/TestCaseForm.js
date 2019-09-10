@@ -48,13 +48,10 @@ class TestCaseForm extends Component {
             actionPagination: {}, //前后置动作分页数据
             preActionVisible: false,
             postActionVisible: false,
-            // selectedPreRowKeys:this.props.testCase.preActionNames.length>0 ? this.props.testCase.preActionNames : [],
-            // selectedPostRowKeys:this.props.testCase.postActionNames.length>0 ? this.props.testCase.postActionNames : [],
             selectedPreRowKeys:[],
             selectedPostRowKeys:[],
             selectedPreActionNames: [],
             selectedPostActionNames: [],
-            // testCase:this.props.testCase ? this.props.testCase : {},
         }
     };
 
@@ -373,7 +370,7 @@ class TestCaseForm extends Component {
                             {getFieldDecorator('suite',
                                 {
                                     rules: [{ required: true, message: '请选择产品' }],
-                                    initialValue :productId,
+                                    initialValue :productId + "",
                                 })(
                                     <Select onChange = {this.onSelectProductChange}>
                                         {
@@ -391,7 +388,7 @@ class TestCaseForm extends Component {
                             getFieldDecorator('moduleId',
                                 {
                                     rules: [{ required: true, message: '请选择所属模块' }],
-                                    initialValue:moduleId,
+                                    initialValue:moduleId + "",
                                 })(
                                     <Select onChange = {this.onSelectModuleChange}>
                                         {
@@ -409,7 +406,7 @@ class TestCaseForm extends Component {
                                 {
                                     rules: [{ required: true, message: '请输入测试环境' }],
                                     // initialValue:baseUrlId ? testEnv.filter(item => item.id === baseUrlId)[0].descs : baseUrlId,
-                                    initialValue:baseUrlId,
+                                    initialValue:baseUrlId + "",
                                 })(
                                     <Select>
                                         {

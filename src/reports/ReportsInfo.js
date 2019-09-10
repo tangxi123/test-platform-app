@@ -62,15 +62,16 @@ class ReportsInfo extends Component {
         title: '运行时间(ms)',
         dataIndex: 'executionTime',
     },
-    {
-        title: '操作',
-        dataIndex: '',
-        render: (record) => (
-            <span onClick={e => e.stopPropagation()}>
-                <Button className="table-button" size="small" onClick={() => this.onReadReportButtonClick(record.id)}>查看</Button>
-            </span>
-        )
-    }];
+    // {
+    //     title: '操作',
+    //     dataIndex: '',
+    //     render: (record) => (
+    //         <span onClick={e => e.stopPropagation()}>
+    //             <Button className="table-button" size="small" onClick={() => this.onReadReportButtonClick(record.id)}>查看</Button>
+    //         </span>
+    //     )
+    // }
+];
     constructor(props) {
         super(props);
         this.state = {
