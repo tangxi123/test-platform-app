@@ -172,6 +172,7 @@ class Parameter extends Component {
 
     //根据页数获取参数数据
     fetchParams = (pageNum, moduleId, searchKey) => {
+        console.log(moduleId);
         const requestInfo = {
             headers: this.reuqestHeaders,
             method: 'GET',
@@ -258,7 +259,7 @@ class Parameter extends Component {
             .then(response => response.json())
             .then(result => alert(result.message))
             .then(() => this.setLoading(false))
-            .then(() => this.fetchParams(1, ''))
+            .then(() => this.fetchParams(1, this.props.productId,''))
             .catch(e => e);
     }
 

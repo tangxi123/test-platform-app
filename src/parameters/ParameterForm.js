@@ -165,6 +165,13 @@ class ParameterForm extends Component {
                         })(<Input placeholder="请输入获取token的url地址" />)
                         }
                     </Form.Item>
+                    <Form.Item label="headers">
+                        {getFieldDecorator('headers', {
+                            rules: [{ required: true, message: '请输入headers' }],
+                            initialValue: tokenParam.headers,
+                        })(<Input placeholder="请输入heades" />)
+                        }
+                    </Form.Item>
                     <Form.Item label="userData">
                         {getFieldDecorator('userData', {
                             rules: [{ required: true, message: '请输入用户数据' }],
@@ -234,18 +241,6 @@ class ParameterForm extends Component {
 }
 const WrappedParameterForm = Form.create({
     name: 'paramterForm',
-    // mapPropsToFields(props) {
-
-    // }
-    // return {
-    //     name: Form.createFormField({value:props.name}),
-    //     descs: Form.createFormField({value:props.descs}),
-    //     radioGroup: Form.createFormField({value:props.radioGroup}),
-    //     moduelId: Form.createFormField({value:props.moduleId}),
-    //     sql: Form.createFormField({value:props.sql}),
-    //     param: Form.createFormField({value:props.param}),
-    // }
-    // }
     mapPropsToFields(props) {
         const { name, descs, radioGroup, moduleId, sql, param } = props;
         if (name && descs && radioGroup && moduleId && sql && param) {
@@ -263,46 +258,5 @@ const WrappedParameterForm = Form.create({
             }
         }
     }
-
-
-    // if (name && descs && radioGroup) {
-    //     switch (radioGroup) {
-    //         case 'SQL':
-    //             const {moduleId, sql, param} = props;
-    //             if (moduleId && sql && param) {
-    //                 return {
-    //                     name: Form.createFormField(name),
-    //                     descs: Form.createFormField(descs),
-    //                     radioGroup: Form.createFormField(radioGroup),
-    //                     moduelId: Form.createFormField(moduleId),
-    //                     sql: Form.createFormField(sql),
-    //                     param: Form.createFormField(param),
-    //                 }
-    //             } else {
-    //                 return {
-    //                     name: null, descs: null, radioGroup: null, moduleId: null, sql: null, param: null
-    //                 }
-    //             }
-    //             break;
-    //         case 'TOKEN':
-    //             const {url, userData} = props;
-    //             if(url && userData){
-    //                 return{
-    //                     name:Form.createFormField(name),
-    //                     descs:Form.createFormField(descs),
-    //                     radioGroup:Form.createFormField(radioGroup),
-    //                     url:Form.createFormField(url),
-    //                     userData:Form.createFormField(userData),            
-    //                 }
-    //             }else{
-    //                 return {
-    //                     name: null, descs: null, radioGroup: null, url:null, userData:null
-    //                 }
-    //             }
-    //             break;
-
-    //     }
-    // }
-    // }
 })(ParameterForm);
 export default withRouter(WrappedParameterForm);

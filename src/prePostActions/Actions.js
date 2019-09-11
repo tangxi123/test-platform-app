@@ -230,7 +230,7 @@ class Actions extends Component {
             .then(response => response.json())
             .then(result => alert(result.message))
             .then(() => this.setLoading(false))
-            .then(() => this.fetchActions(1, ''))
+            .then(() => this.fetchActions(1, this.props.productId,''))
             .catch(e => e);
     }
 

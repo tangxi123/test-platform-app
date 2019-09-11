@@ -18,6 +18,7 @@ class Database extends Component {
     submitCreateUrl = end_url+'/api/dbConfig/create';  //创建dbConfig的url
     submitUpdateUrl = end_url+'/api/dbConfig/update'; //更新dbConfig的url
     querydbConfigByIdUrl = end_url+'/api/dbConfig/query/' //根据id获取url信息的url
+    deleteParamUrl = end_url + '/api/dbConfig/delete/' //根据id删除config的url
     headers = {                                     //发送请求的headers
         'user-agent': 'Mozilla/4.0 MDN Example',
         'content-type': 'application/json'
@@ -169,6 +170,22 @@ class Database extends Component {
             return result;
         };
 
+    }
+
+     //点击删除按钮
+    onDeleteButtonClick = id => {
+        const requestInfo = {
+            headers: this.reuqestHeaders,
+            method: 'DELETE',
+            mode: 'cors',
+        };
+        this.setLoading(true);
+        fetch(this.deleteParamUrl + id, requestInfo)
+            .then(response => response.json())
+            .then(result => alert(result.message))
+            .then(() => this.setLoading(false))
+            .then(() => this.getDBConfigs(1, this.props.productId,''))
+            .catch(e => e);
     }
     //获取列表所有url数据
     getDBConfigs = (pageNum, moduleId, searchKey) => {

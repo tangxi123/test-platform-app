@@ -69,15 +69,16 @@ class ParameterModal extends Component {
                 };
                 break;
             case 'TOKEN':
+                console.log(values);
                 type = "ParameterToken";
                 paramValues = {
                     type: type,
                     url: values.url,
+                    headers: values.headers,
                     userData: values.userData,
                 };
                 break;
             case 'KEYVALUE':
-                console.log(values);
                 type = 'ParameterKeyValue';
                 paramValues = {
                     type: type,

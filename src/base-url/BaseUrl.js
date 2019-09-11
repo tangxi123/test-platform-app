@@ -186,7 +186,7 @@ class BaseUrl extends Component {
         fetch(this.deleteUrl + id, requestInfo)
             .then(response => response.json())
             .then(result => this.deleteAlert(result))
-            .then(result => this.fetchUrls())
+            .then(() => this.fetchUrls(1,this.props.productId,''))
             .catch(e => e);
     }
 
