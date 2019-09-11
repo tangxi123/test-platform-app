@@ -289,7 +289,7 @@ class Reports extends Component {
     //生成报告
     generateReport = (moduleId,e) => {
         e.stopPropagation();
-        console.log(moduleId);
+        alert("开始生成报告");
         const requestInfo = {
             headers: this.requestHeaders,
             method: 'GET',

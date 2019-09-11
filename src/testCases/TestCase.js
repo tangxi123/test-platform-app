@@ -331,10 +331,12 @@ class TestCase extends Component {
             method: 'DELETE',
             mode: 'cors',
         };
+        this.setLoading(true);
         fetch(this.deleteTestCaseUrl+testCaseId, requestInfo)
             .then(response => response.json())
             .then(result => alert(result.message))
-            .then(this.fetchTestCases(currentPageNum, productId, searchKey))
+            .then(() => this.setLoading(false))
+            .then(() => this.fetchTestCases(currentPageNum, productId, searchKey))
             .catch(e => e);
     }
 
