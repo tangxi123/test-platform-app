@@ -30,7 +30,7 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
     <BrowserRouter>
-        <Route path="/" exact render={() => <Redirect to="/home" />}></Route>
+        <Route path="/" exact render={() => <Redirect to="/module" />}></Route>
         <Route path="/home" component={App}/>
         <Route path="/baseUrl" component={BaseUrl}/>
         <Route path="/addBaseUrl" component={AddBaseUrl}/>
